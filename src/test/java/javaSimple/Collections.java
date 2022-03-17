@@ -1,9 +1,6 @@
 package javaSimple;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Collections {
 
@@ -73,6 +70,7 @@ public class Collections {
             System.out.println("Key= "+ m.getKey());
             System.out.println("Value= "+ m.getValue());
         }
+
 
     }
 

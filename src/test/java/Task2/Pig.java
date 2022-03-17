@@ -11,6 +11,10 @@ public class Pig {
         System.out.println("hrhrhr");
     }
 
+    public void run() {
+        System.out.println("top top");
+    }
+
     public void say() {
         System.out.println("Hru");
     }

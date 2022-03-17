@@ -15,6 +15,7 @@
         <server.port>4448</server.port>
         <fork.Count>1</fork.Count>
         <suiteXmlFile>src\test\testng.xml</suiteXmlFile>
+        <suiteXmlFile>src\test\testng2.xml</suiteXmlFile>
 
         <spmeModule.includes>firstTests.FirstTest</spmeModule.includes>
     </properties>
@@ -62,9 +63,9 @@
                 <version>2.22.2</version>
                 <configuration>
 
-<!--                    <suiteXmlFiles>-->
-<!--                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>-->
-<!--                    </suiteXmlFiles>-->
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
 
 
                     <includes>

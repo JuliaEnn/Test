@@ -7,6 +7,7 @@ import org.w3c.dom.ls.LSOutput;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.sql.SQLOutput;
 
 public class FirstTest extends BaseTest {
@@ -34,7 +35,7 @@ public class FirstTest extends BaseTest {
                 BufferedReader bf2 = new BufferedReader(new FileReader(filePath));
                 bf2.lines().forEach(s -> System.out.println("строка файла "+ s));
 
-            } catch (Exception e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
 

@@ -14,6 +14,10 @@ public class SearchResultPageObject extends Base {
     @FindBy(xpath = ".//div[@class='main']//a[contains(.,'Картинки')]")
     private WebElement imagesTab;
 
+    //@FindBy(xpath = ".//div[@class='main']//h3[contains(.,'Java - Википедия')]")
+    @FindBy(xpath = ".//div[@class='main']//a[@href='https://www.java.com/ru/']")
+    private WebElement javaPage;
+
     /**
      *
      * Проверяем, что кнопка Картинки существует на странице
@@ -21,5 +25,14 @@ public class SearchResultPageObject extends Base {
 
     public boolean isImagesTabButtonIsExist() {
         return waitVisibilityElement(imagesTab);
+    }
+
+    /**
+     *
+     * Переходим на страницу Java
+     */
+
+    public void clickJavaPage() {
+        click(javaPage);
     }
 }

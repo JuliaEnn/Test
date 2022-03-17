@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -9,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Base {
     private WebDriver driver;
 
-    protected final int driverWaitTime = 10;
+    protected final int driverWaitTime = 15;
 
     public Base(final WebDriver driver) {
         PageFactory.initElements(driver, this);
@@ -36,7 +37,11 @@ public class Base {
         return element.getText();
     }
 
-    public  Boolean waitVisibilityElement(final WebElement element) {
+//    public boolean isElementExists(final WebElement element){
+//        driver.findElement(By.xpath(element));
+//    }
+
+    public Boolean waitVisibilityElement(final WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, driverWaitTime);
 
         try {
