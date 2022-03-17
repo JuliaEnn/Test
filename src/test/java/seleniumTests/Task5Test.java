@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.asserts.Assertion;
 import pageObject.google.InitPageObject;
 import pageObject.google.SearchResultPageObject;
-import pageObject.wikipedia.JavaPage;
+import pageObject.javaPage.JavaPage;
 
 public class Task5Test extends BaseTest{
 

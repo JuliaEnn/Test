@@ -1,4 +1,4 @@
 /**
  * Описание страниц для сайта Википедия
  */
-package pageObject.wikipedia;
+package pageObject.javaPage;

@@ -1,4 +1,4 @@
-package pageObject.wikipedia;
+package pageObject.javaPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
