@@ -1,5 +1,7 @@
 package db;
 
+import com.mysql.cj.xdevapi.SqlResult;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -112,7 +114,6 @@ public class DBHelper {
             while (rs.next()){
                 count++;
             }
-           // count=rs.getRow();
         } catch (SQLException e) {
             e.printStackTrace();
         }
