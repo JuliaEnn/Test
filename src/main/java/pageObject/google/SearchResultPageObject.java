@@ -1,5 +1,6 @@
 package pageObject.google;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,6 +24,7 @@ public class SearchResultPageObject extends Base {
      * Проверяем, что кнопка Картинки существует на странице
      */
 
+    @Step("Проверяем, что кнопка Картинки существует на странице")
     public boolean isImagesTabButtonIsExist() {
         return waitVisibilityElement(imagesTab);
     }

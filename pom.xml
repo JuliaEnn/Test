@@ -9,6 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <aspectjs.version>1.9.8</aspectjs.version>
@@ -17,7 +19,10 @@
         <suiteXmlFile>src\test\testng.xml</suiteXmlFile>
         <suiteXmlFile>src\test\testng2.xml</suiteXmlFile>
 
-        <spmeModule.includes>firstTests.FirstTest</spmeModule.includes>
+        <someModule.includes>firstTests.SecondTest</someModule.includes>
+
+        <stend.key>stend1</stend.key>
+
     </properties>
 
     <dependencies>
@@ -50,6 +55,34 @@
             <version>4.1.2</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.22</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+            <version>2.13.9</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.28</version>
+        </dependency>
 
 
     </dependencies>
@@ -69,7 +102,7 @@
 
 
                     <includes>
-                        <include>${spmeModule.includes}</include>
+                        <include>${someModule.includes}</include>
                     </includes>
 
                     <forkCount>${fork.Count}</forkCount>
@@ -89,6 +122,16 @@
 
                         <property>
                             <name>ServerPort</name>
+                            <value>${server.port}</value>
+                        </property>
+
+                        <property>
+                            <name>StendKey</name>
+                            <value>${stend.key}</value>
+                        </property>
+
+                        <property>
+                            <name>BrowserName</name>
                             <value>${server.port}</value>
                         </property>
 
