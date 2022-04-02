@@ -16,6 +16,7 @@
         <aspectjs.version>1.9.8</aspectjs.version>
         <server.port>4448</server.port>
         <fork.Count>1</fork.Count>
+        <browser.name>chrome</browser.name>
         <suiteXmlFile>src\test\testng.xml</suiteXmlFile>
         <suiteXmlFile>src\test\testng2.xml</suiteXmlFile>
 
@@ -132,7 +133,7 @@
 
                         <property>
                             <name>BrowserName</name>
-                            <value>${server.port}</value>
+                            <value>${browser.name}</value>
                         </property>
 
                     </systemProperties>

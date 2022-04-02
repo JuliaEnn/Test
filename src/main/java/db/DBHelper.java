@@ -1,7 +1,5 @@
 package db;
 
-import com.mysql.cj.xdevapi.SqlResult;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -86,8 +84,40 @@ public class DBHelper {
 
     public static String getValueFirstRow(String sql, String colName) {
 
-        String value = getSqlResult(sql).get(1).get("colName").toString();
+        String value = getSqlResult(sql).get(0).get(colName).toString();
 
         return value;
     }
+
+    public static void executeSqlResult(final String sql) {
+
+        ResultSet rs = null;
+        init();
+        try {
+            st = con.createStatement();
+            st.executeUpdate(sql);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static int countSqlResult(final String sql) {
+
+        int count = 0;
+        ResultSet rs = null;
+        init();
+        try {
+            st = con.createStatement();
+            rs = st.executeQuery(sql);
+            while (rs.next()){
+                count++;
+            }
+           // count=rs.getRow();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return count;
+
+    }
+
 }

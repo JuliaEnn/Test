@@ -7,7 +7,7 @@ public class DBGetTest {
 
     @Test
     public void startTest() {
-        String sql = "SELECT * FROM REGISTRATION";;
+        String sql = "SELECT * FROM REGISTRATION";
 
         DBHelper.getSqlResult(sql).forEach(s -> System.out.println(s));
 

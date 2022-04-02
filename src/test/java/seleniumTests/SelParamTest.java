@@ -47,12 +47,12 @@ public class SelParamTest extends BaseTest {
         Assertion as = new Assertion();
         as.assertTrue(sr.isImagesTabButtonIsExist());
 
-//        File file = new File("./src/main/resources/" + testName + ".jpg");
-//        try {
-//            FileUtils.writeByteArrayToFile(file, getScreenShot());
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        File file = new File("./src/main/resources/" + testName + ".jpg");
+        try {
+            FileUtils.writeByteArrayToFile(file, getScreenShot());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }
