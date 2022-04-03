@@ -8,8 +8,11 @@ public class DBInsertTestTask8 {
 
     @Test
     public void startTest() {
-        String sql = "INSERT INTO REGISTRATION (id, last, first, age) VALUES ('22', 'lastname8', 'name8', 22)";
         String sql2 = "SELECT * FROM REGISTRATION ORDER BY id DESC";
+
+        int id1 = Integer.parseInt(DBHelper.getValueFirstRow(sql2, "id")) + 1;
+
+        String sql = "INSERT INTO REGISTRATION (id, last, first, age) VALUES ('" + id1 + "', 'lastname9', 'name9', 22)";
 
         int count1 = DBHelper.countSqlResult(sql2);
         DBHelper.executeSqlResult(sql);
@@ -17,7 +20,7 @@ public class DBInsertTestTask8 {
         DBHelper.getSqlResult(sql2).forEach(s -> System.out.println(s));
 
         Assertion as = new Assertion();
-        as.assertEquals(DBHelper.getValueFirstRow(sql2, "id"), "22");
+        as.assertEquals(Integer.parseInt(DBHelper.getValueFirstRow(sql2, "id")), id1);
         //as.assertEquals(DBHelper.getValueFirstRow(sql2, "first"), "name8");
         //as.assertEquals(DBHelper.getValueFirstRow(sql2, "last"), "lastname8");
         as.assertTrue(count2 > count1);

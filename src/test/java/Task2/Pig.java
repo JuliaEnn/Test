@@ -1,10 +1,12 @@
 package Task2;
 
-public class Pig {
+import ext.Animals;
+
+public class Pig extends Animals {
 
     private String name;
     public Pig(String name) {
-        this.name=name;
+        super(name);
     }
 
     public void sleep() {
