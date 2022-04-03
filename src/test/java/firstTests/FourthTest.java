@@ -22,11 +22,11 @@ public class FourthTest extends BaseTest {
         System.out.println("Ответ: да, больше");
 
         if (firstP > firstParam) {
-            System.out.println("Но " + firstP + " > первого параметра" + firstParam);
+            System.out.println("Но " + firstP + " > первого параметра " + firstParam);
         }
 
         if (secondP > firstParam) {
-            System.out.println("Но " + secondP + " > первого параметра" + firstParam);
+            System.out.println("Но " + secondP + " > первого параметра " + firstParam);
         }
 
 
