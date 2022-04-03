@@ -9,16 +9,17 @@ import org.testng.asserts.Assertion;
 public class FifthTest {
 
     @Test
-    public void contain(int firstParam, int secondParam) {
+    public void contain() {
         String first1 = "Привет";
         String second2 = "р";
-        System.out.println("Первое слово  '" + firstParam + "' содержит текст второго слова '" + secondParam + "'?");
+        System.out.println("Первое слово  '" + first1 + "' содержит текст второго слова '" + second2 + "'?");
 
-        String text=null;
-        System.out.println("Строка  " + text);
+//        String text=null;
+//        System.out.println("Строка  " + text);
 
         Assertion a = new Assertion();
-        a.assertTrue(first1.contains(second2), "Да, первое слово содержит текст второго параметра");
+        a.assertTrue(first1.contains(second2));
+        System.out.println("Да, первое слово содержит текст второго параметра");
 
     }
 
