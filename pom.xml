@@ -16,10 +16,10 @@
         <aspectjs.version>1.9.8</aspectjs.version>
         <server.port>4448</server.port>
         <fork.Count>1</fork.Count>
-        <browser.name>chrome</browser.name>
+        <browser.name>browserName2</browser.name>
         <suiteXmlFile>src\test\testng2.xml</suiteXmlFile>
 
-        <someModule.includes>firstTests.SecondTest</someModule.includes>
+        <someModule.includes>firstTests.SelParamTest</someModule.includes>
 
         <stend.key>stend1</stend.key>
 
@@ -134,6 +134,7 @@
                             <name>BrowserName</name>
                             <value>${browser.name}</value>
                         </property>
+
 
                     </systemProperties>
 
